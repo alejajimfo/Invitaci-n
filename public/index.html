@@ -1,0 +1,95 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Josito's Awards</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141210;--cream:#f4efe6;--gold:#c9a45c;--wine:#7a0f1a;--line:#e3dccd}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;margin:0}
+section{padding:72px 6vw}.in{max-width:1000px;margin:auto}h2{font-size:clamp(30px,5vw,46px);margin-bottom:12px}
+.dark{background:var(--ink);color:var(--cream)}.wine{background:var(--wine);color:var(--cream)}
+nav{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:20px 6vw;color:#fff;z-index:2}
+nav a{color:#fff;text-decoration:none;font-size:13px;margin-left:18px}nav .btn{border:1px solid var(--gold);padding:8px 16px;border-radius:99px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;color:#fff;padding:120px 6vw 80px;background:linear-gradient(#0009,#000c),radial-gradient(circle at 50% 30%,#7a0f1a,#141210)}
+.hero h1{font-size:clamp(64px,14vw,160px);letter-spacing:.04em}.hero em{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);padding:14px 28px;border-radius:99px;font-weight:600;border:0;cursor:pointer;text-decoration:none;font-size:15px}
+.wine .btn,.btn.w{background:var(--wine);color:#fff}
+.row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
+.card{border:1px solid #ffffff26;border-radius:16px;padding:22px}.card b{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:var(--gold)}
+.light .card{background:#fff;border-color:var(--line);color:var(--ink)}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+form .f{grid-column:1/-1}label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;background:#faf8f3;width:100%}
+.radios{display:flex;gap:20px;font-weight:400}.radios label{display:flex;align-items:center;gap:6px;font-weight:400}.radios input{width:auto}
+#msg{font-size:14px;padding:12px;border-radius:10px;display:none}.good{background:#e6f4e8;color:#1d5a2a}.bad{background:#fbe6e6;color:#8a1f1f}
+.drop{border:2px dashed var(--gold);border-radius:20px;padding:36px;text-align:center;background:#fff;margin-top:20px}.drop.on{background:#f8efd9}
+.bar{height:6px;background:#eee;border-radius:9px;margin-top:14px;overflow:hidden;display:none}.bar i{display:block;height:100%;width:0;background:var(--wine)}
+.map a{margin:6px 6px 0 0}.foot{text-align:center;padding:60px 6vw}
+@media(max-width:640px){form{grid-template-columns:1fr}nav a:not(.btn){display:none}}
+.hero{background:linear-gradient(#0007,#000b),url(img/mesas-dia.jpg) center/cover}
+.two{display:grid;gap:40px;grid-template-columns:1fr 1.1fr;align-items:center}.arch{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:240px 240px 20px 20px;box-shadow:0 20px 50px #0004}
+.ph{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:16px}.vest{padding:0}.vest .two{gap:0;align-items:stretch}.vest img{width:100%;height:100%;object-fit:cover;min-height:340px}.vest .tx{padding:72px 6vw}
+.fin{background:linear-gradient(#000a,#000c),url(img/noche.jpg) center/cover}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><span>The Josito's Awards</span><div><a href="#agenda">Agenda</a><a href="#llegar">Ubicaciones</a><a href="#recuerdos">Recuerdos</a><a class="btn" href="#confirmar">Confirmar asistencia</a></div></nav>
+
+<header class="hero"><div><em>Para celebrar</em><p style="margin:4px 0">CUMPLEAÑOS</p><h1>JOSITO</h1>
+<p style="max-width:520px;margin:16px auto 28px">Una celebración inolvidable, vestida de cine, para brindar por su historia y los mejores momentos que aún están por venir.</p>
+<a class="btn" href="#confirmar">Descubrir la invitación</a></div></header>
+
+<section id="invitacion"><div class="in two"><img class="arch" src="img/fachada.jpg" alt="Hospedería El Libertador"><div><h2>Hoy, Josito es el protagonista.</h2>
+<p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:var(--wine)">Una historia merece ser celebrada con quienes le han dado sentido.</p>
+<p style="max-width:620px">Nos reunimos en Zipaquirá para compartir una eucaristía, una mesa y todos esos recuerdos que convierten una vida en una gran película. Tu presencia es parte esencial de esta celebración.</p></div></div></section>
+
+<section class="dark" id="agenda"><div class="in"><h2>Una tarde digna de recordar</h2><p>Dos momentos, una misma historia. Te recomendamos llegar con anticipación.</p>
+<div class="row"><div class="card"><b>12:00 pm</b><h3>Eucaristía</h3><p>Catedral Diocesana Zipaquirá. Un encuentro de gratitud para abrir la celebración.</p></div>
+<div class="card"><b>01:30 pm</b><h3>Almuerzo</h3><p>Hospedería El Libertador. Brindis, buena mesa y recuerdos compartidos.</p></div></div></div></section>
+
+<section class="wine vest"><div class="two"><img src="img/vestuario.jpg" alt="Traje negro y vestido vino"><div class="tx"><h2>Vestido de gala</h2><p>La alfombra roja espera tu mejor versión. Elige una silueta elegante y atemporal, con el negro como protagonista y acentos sobrios.</p>
+<div class="row"><div class="card"><h3>Ellos</h3>Traje o esmoquin</div><div class="card"><h3>Ellas</h3>Vestido largo o midi elegante</div></div></div></div></section>
+
+<section id="confirmar"><div class="in"><h2>Confirma tu asistencia antes del 15 de Octubre</h2><p>Completa tus datos y cuéntanos si vas con acompañante.</p>
+<form id="rsvp">
+<label>Nombre *<input name="nombre" required placeholder="Tu nombre"></label>
+<label>Apellidos *<input name="apellidos" required placeholder="Tus apellidos"></label>
+<label>Correo electrónico *<input name="email" type="email" required placeholder="nombre@correo.com"></label>
+<label>WhatsApp *<input name="telefono" type="tel" required placeholder="+57 300 000 0000"></label>
+<div class="f"><label>¿Nos acompañas? *</label><div class="radios"><label><input type="radio" name="asiste" value="Sí, allí estaré" checked>Sí, allí estaré</label><label><input type="radio" name="asiste" value="No podré asistir">No podré asistir</label></div></div>
+<label>Número de acompañantes<select name="acompanantes"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+<label>Nombre del acompañante<input name="nombreAcomp" placeholder="Nombre completo"></label>
+<label class="f">Restricciones alimentarias<input name="restricciones" placeholder="Vegetariano, alergias, etc."></label>
+<label class="f">Mensaje para Josito<textarea name="mensaje" rows="3" placeholder="Escribe un saludo o deseo especial..."></textarea></label>
+<label class="f" style="display:flex;gap:8px;font-weight:400"><input type="checkbox" required style="width:auto">Acepto el tratamiento de mis datos para esta invitación.</label>
+<button class="btn f" id="go">Confirmar asistencia</button><div id="msg" class="f"></div></form></div></section>
+
+<section class="light" id="llegar" style="background:#ece4d3"><div class="in map"><h2>Dos escenarios, un solo destino</h2>
+<div class="row"><div class="card"><img class="ph" src="img/catedral.jpg" style="object-position:center 35%" alt="Catedral Diocesana"><h3>Catedral Diocesana Zipaquirá</h3><p>Eucaristía · 12:00 pm</p>
+<a class="btn w" target="_blank" href="https://www.google.com/maps/place/Catedral+Diocesana+de+Zipaquir%C3%A1/@5.0238464,-74.0132252,16z/data=!4m10!1m2!2m1!1sCatedral+Diocesana+Zipaquir%C3%A1!3m6!1s0x8e4070205f1492af:0xf7b4f4eb90d2f6c5!8m2!3d5.0238464!4d-74.003698!15sCh1DYXRlZHJhbCBEaW9jZXNhbmEgWmlwYXF1aXLDoVofIh1jYXRlZHJhbCBkaW9jZXNhbmEgemlwYXF1aXLDoZIBD2NhdGhvbGljX2NodXJjaJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyczVSMXBWVG5kamVrNUZXREZPVDA1SE1IcFhWMnhEVGxSV2RWZ3lZeEFC4AEA-gEECAAQQA!16s%2Fm%2F03qf4_l?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a><a class="btn w" target="_blank" href="https://waze.com/ul?q=Catedral%20Diocesana%20Zipaquira">Waze</a></div>
+<div class="card"><img class="ph" src="img/hotel.jpg" alt="Hospedería El Libertador"><h3>Hospedería El Libertador</h3><p>Almuerzo · 01:30 pm</p>
+<a class="btn w" target="_blank" href="https://www.google.com/maps/place/Hospeder%C3%ADa+Boutique+El+Libertador/@5.019547,-74.0289879,15z/data=!4m14!1m2!2m1!1sHospeder%C3%ADa+El+Libertador+Zipaquir%C3%A1!3m10!1s0x8e4070192476669f:0x199e6da33f8f3152!5m2!4m1!1i2!8m2!3d5.019547!4d-74.0099335!15sCiRIb3NwZWRlcsOtYSBFbCBMaWJlcnRhZG9yIFppcGFxdWlyw6GSAQ92YWNhdGlvbl9yZW50YWzgAQA!16s%2Fg%2F11lyz9pck9!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a><a class="btn w" target="_blank" href="https://waze.com/ul?q=Hospederia%20El%20Libertador%20Zipaquira">Waze</a></div></div></div></section>
+
+<section class="dark"><div class="in"><h2>Graba unas palabras para Josito</h2><p>Duración sugerida: 30–60 segundos.</p>
+<div class="row"><div class="card">1. Busca un lugar ideal, con buena luz y sin ruido.</div><div class="card">2. Graba en horizontal, con el teléfono a la altura de los ojos.</div><div class="card">3. Preséntate: di tu nombre y cuenta un recuerdo especial.</div><div class="card">4. Revisa el resultado: que se escuche y se vea claro.</div><div class="card">5. Súbelo al Drive en la zona de abajo.</div></div></div></section>
+
+<section id="recuerdos"><div class="in"><h2>Tu recuerdo también hace parte de la historia</h2><p>Sube fotos y videos al Drive del evento. Fotos: JPG, PNG, HEIC. Videos: MP4, MOV.</p>
+<label class="drop" id="drop" for="files" style="display:block;cursor:pointer"><h3>Arrastra tus archivos aquí</h3><p>o selecciónalos desde tu dispositivo</p><span class="btn">Seleccionar archivos</span>
+<input id="files" type="file" multiple accept="image/*,video/*" hidden><div class="bar" id="bar"><i></i></div><p id="up" style="margin:12px 0 0;font-size:14px"></p></label></div></section>
+
+<section class="dark foot fin" style="padding:140px 6vw"><h2>Las grandes historias se celebran juntas.</h2><a class="btn" href="#confirmar">Confirmar mi asistencia</a></section>
+
+<script>
+const $=s=>document.querySelector(s);let who='';
+$('#rsvp').onsubmit=async e=>{e.preventDefault();const b=$('#go'),m=$('#msg');b.disabled=true;
+ const d=Object.fromEntries(new FormData(e.target));who=d.nombre+' '+d.apellidos;
+ try{const r=await fetch('/api/rsvp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});const j=await r.json();
+  if(!r.ok)throw Error(j.error);m.className='f good';m.textContent='Tu respuesta quedó registrada. Te avisaremos por WhatsApp cuando esté aprobada.';e.target.reset()}
+ catch(x){m.className='f bad';m.textContent=x.message}m.style.display='block';b.disabled=false};
+const send=async fs=>{if(!fs.length)return;const bar=$('#bar'),i=$('#bar i'),u=$('#up');bar.style.display='block';let n=0;
+ for(const f of fs){n++;u.textContent=`Subiendo ${n} de ${fs.length}…`;i.style.width='0';
+  try{const r=await fetch('/api/upload-url',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:(who||'invitado')+'_'+f.name,type:f.type||'application/octet-stream'})});const {url}=await r.json();if(!url)throw 0;
+   await new Promise((ok,ko)=>{const x=new XMLHttpRequest();x.open('PUT',url);x.upload.onprogress=e=>i.style.width=(e.loaded/e.total*100)+'%';x.onload=()=>x.status<300?ok():ko();x.onerror=ko;x.send(f)})}
+  catch(e){u.textContent='No se pudo subir '+f.name+'. Intenta de nuevo.';return}}
+ u.textContent='¡Listo! Tus archivos ya están en el álbum.'};
+$('#files').onchange=e=>send(e.target.files);
+const dr=$('#drop');['dragover','dragenter'].forEach(t=>dr.addEventListener(t,e=>{e.preventDefault();dr.classList.add('on')}));
+['dragleave','drop'].forEach(t=>dr.addEventListener(t,e=>{e.preventDefault();dr.classList.remove('on')}));dr.addEventListener('drop',e=>send(e.dataTransfer.files));
+</script></body></html>

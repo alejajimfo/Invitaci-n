@@ -1,0 +1,20 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Admin · Josito's Awards</title>
+<style>body{font-family:system-ui,sans-serif;background:#141210;color:#f4efe6;margin:0;padding:24px}h1{font-weight:500}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px;border-bottom:1px solid #3a332b;text-align:left}th{color:#c9a45c}button{background:#c9a45c;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer}.ok{color:#7fd08a}.wrap{overflow-x:auto}</style></head><body>
+<h1>Confirmaciones</h1><p id="t"></p><div class="wrap"><table><thead><tr><th>Nombre</th><th>Asiste</th><th>Personas</th><th>WhatsApp</th><th>Estado</th><th></th></tr></thead><tbody id="b"></tbody></table></div>
+<script>
+let P=sessionStorage.getItem('p')||prompt('Contraseña del panel');const H=()=>({'Content-Type':'application/json','x-admin-password':P});
+const MSG=n=>`Hola ${n}, tu confirmación para el cumpleaños de Josito ha sido aprobada. Te esperamos en la Catedral Diocesana de Zipaquirá a las 12:00 pm y luego en la Hospedería El Libertador.`;
+const wa=t=>{let d=t.replace(/\D/g,'');if(d.length===10)d='57'+d;return d};
+async function load(){const q=await fetch('/api/admin-list',{headers:H()});
+ if(q.status===401){sessionStorage.removeItem('p');t.textContent='Contraseña incorrecta. Recarga la página.';return}
+ sessionStorage.setItem('p',P);const r=await q.json();
+ const si=r.filter(x=>x.asiste&&x.asiste.startsWith('S'));
+ t.textContent=`${r.length} respuestas · ${si.reduce((s,x)=>s+1+Number(x.acomp||0),0)} personas confirmadas`;
+ b.innerHTML='';r.forEach(x=>{const tr=document.createElement('tr'),ap=x.estado==='Aprobado';
+  tr.innerHTML=`<td>${x.nombre} ${x.apellidos}</td><td>${x.asiste}</td><td>${1+Number(x.acomp||0)}</td><td>${x.telefono}</td><td class="${ap?'ok':''}">${x.estado}</td><td></td>`;
+  const bt=document.createElement('button');bt.textContent=ap?'Reenviar WhatsApp':'Aprobar y enviar WhatsApp';
+  bt.onclick=async()=>{const w=window.open('about:blank');if(!ap)await fetch('/api/admin-approve',{method:'POST',headers:H(),body:JSON.stringify({row:x.row})});
+   w.location=`https://wa.me/${wa(x.telefono)}?text=${encodeURIComponent(MSG(x.nombre))}`;load()};
+  tr.lastChild.appendChild(bt);b.appendChild(tr)})}
+load();
+</script></body></html>
